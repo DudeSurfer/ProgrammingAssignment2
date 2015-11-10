@@ -39,7 +39,7 @@ cacheSolve <- function(x, ...) {
     
     mat_data <- x$get()
     if(!is.na(mat_data)){
-        i <- solve(mat_data)
+        i <- solve(mat_data, ...)
         x$setinvs(i)
         return (i)
     } else {
